@@ -9,6 +9,13 @@ modules:
    requires:
     - name: hdi_Messi_db
 
+
+ - name: Lautaro
+   type: hdb
+   path: Lautaro
+   requires:
+    - name: hdi_Lautaro
+
 resources:
  - name: hdi_Messi_db
    parameters:
@@ -17,3 +24,12 @@ resources:
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
+
+ - name: hdi_Lautaro
+   parameters:
+      config:
+         schema: LAUTARO
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+
