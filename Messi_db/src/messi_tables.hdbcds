@@ -1,6 +1,6 @@
 context messi_tables {
 entity player{
 	key id: Integer;
-		name: String(20);
+		name: String(150);
 };
 };
