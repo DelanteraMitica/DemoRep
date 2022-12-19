@@ -1,3 +1,19 @@
 ID: DemoRep
 _schema-version: '2.1'
 version: 0.0.1
+
+modules:
+ - name: Messi_db
+   type: hdb
+   path: Messi_db
+   requires:
+    - name: hdi_Messi_db
+
+resources:
+ - name: hdi_Messi_db
+   parameters:
+      config:
+         schema: MESSI
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
